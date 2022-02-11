@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@fawmi/vue-google-maps": "^0.9.4",
     "@googlemaps/js-api-loader": "^1.12.12",
     "axios": "^0.24.0",
     "browserify": "^17.0.0",
@@ -22,6 +23,8 @@
     "node-geocoder": "^3.28.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue2-google-maps": "^0.10.7",
+    "vue3-google-map": "^0.8.3",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
