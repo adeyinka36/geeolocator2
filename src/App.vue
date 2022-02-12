@@ -2,7 +2,7 @@
     <div class="container">
       <h1>Please enter a Postcode below</h1>
       <input id="postcode" v-model="postcode"/>
-      <button @click="geocoder">SEARCH</button>
+      <button @click="geocoder" >SEARCH</button>
     </div>
   <div class="map-div">
   <GoogleMap
@@ -12,6 +12,7 @@
       :zoom="7"
       map-type-id="terrain"
       style="width: 90%; height: 75vh"
+      ref="email"
 >
     <Marker :options= "{position:center}"/>
   </GoogleMap>
@@ -44,7 +45,7 @@ export default {
     geocoder() {
       axios.post(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.postcode}&key=AIzaSyA8DwLkDo-ZqT5h7nsq2MaZPQAvJbv48vY`)
       .then(res=> this.center = res.data.results[0].geometry.location)
-      window.scrollIntoView(this.mapId)
+        this.$refs.email.focus();
     }
   },
   components:{
