@@ -3,6 +3,6 @@ module.exports = {
       port: 8200
   },
     publicPath: process.env.NODE_ENV === 'production'
-    ? '/hello-world/'
+    ? '/geeolocator2/'
     : '/'
 }
